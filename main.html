@@ -4,8 +4,12 @@
   </head>
   <body>
     Enter your name: <input type="text" id="fname">
-	
-	<script type="text/javascript" src="./script.js">
-	</script>
+
+    <script type="text/javascript">
+      document.getElementById("fname").addEventListener("blur", function() {
+        // Convert the content of the input field to uppercase
+        this.value = this.value.toUpperCase();
+      });
+    </script>
   </body>
 </html>
